@@ -3,6 +3,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import requests
 from io import BytesIO
+import imageio.v2 as imageio
 
 # 读取网络图像
 url = "https://www.manongbook.com/d/file/python/e17c6518b44b6591781903c81d6590f14.jpg"
@@ -17,3 +18,8 @@ img_np = np.array(img_pil)
 plt.imshow(img_np) # 将图片放入图片显示窗口里
 plt.axis("off") # 关闭显示图片的坐标轴
 plt.show() # 弹出显示窗口
+
+im = imageio.imread('images/face.png')
+plt.imshow(im)
+plt.axis("off")
+plt.show()
